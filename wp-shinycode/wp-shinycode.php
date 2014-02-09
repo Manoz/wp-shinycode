@@ -32,6 +32,26 @@ function shinycode_languages() {
 }
 
 /**
+ * Add some shortcodes magic
+ * @since 1.0.0
+ */
+// Search for code tags and replace it
+add_filter( 'shinycode_before', '_shinycode_before', 10, 3 );
+function _shinycode_before($content) {
+    $content = preg_replace('#(\s*)\[shinycode([^\s\]_]*(?:_[^\s\]]*)?)([^\]]*)\](.*?)\[/shinycode\2\](\s*)#sie', '$this->_shinycode_perform_highlight(\'\\4\', \'\\3\', $content, \'\\2\', \'\\1\', \'\\5\');', $content);
+
+    return $content;
+}
+
+add_filter( 'shinycode_after', '_shinycode_after', 10, 3 );
+function _shinycode_after($content) {
+    $blocks = array();
+    $content = str_replace(array_keys($this->blocks), array_values($this->blocks), $content);
+
+    return $content;
+}
+
+/**
  * Add a "settings" link in plugins page
  * @since 1.0.0
  */
@@ -170,7 +190,7 @@ function add_shinycode_mce( $plugin_array ) {
 }
 
 function shinycode_register_button( $buttons ) {
-    array_push($buttons, "|", "sc");
+    array_push($buttons, "sc");
     return $buttons;
 }
 
@@ -193,9 +213,9 @@ function wp_ajax_shinycode_box() {
                     <tbody>
                         <tr valign="top" class="field">
                             <th class="label" scope="row">
-                                <label for="shinycode-language"><?php _e('Select a language', 'shinycode'); ?></label>
+                                <label for="language"><?php _e('Select a language', 'shinycode'); ?></label>
                                 <td>
-                                    <select name="shinycode-language" id="shinycode-language">
+                                    <select name="language" id="language">
                                         <optgroup label="<?php _e( 'Select a language', 'shinycode' ); ?>">
                                         <?php
                                         $langs  = array(
@@ -216,6 +236,26 @@ function wp_ajax_shinycode_box() {
                                 </td>
                             </th>
                         </tr>
+
+                        <tr valign="top" class="field">
+                            <th class="label" scope="row">
+                                <label for="title"><?php _e('Add a title', 'shinycode'); ?></label>
+                                <td>
+                                    <input type="text" name="title" id="title" placeholder="<?php _e('Title for your blockcode', 'shinycode'); ?>"/>
+                                </td>
+                            </th>
+                        </tr>
+
+
+                        <tr valign="top" class="field">
+                            <th class="label" scope="row">
+                                <label for="shinycode-blockcode"><?php _e('Add your code', 'shinycode'); ?></label>
+                                <td>
+                                    <textarea name="shinycode-blockcode" id="shinycode-blockcode" rows="5"></textarea>
+                                </td>
+                            </th>
+                        </tr>
+
                         <tr valign="top" class="field">
                             <td>
                                 <p class="current-page"><input name="shinycode-insert" type="submit" class="button-primary" id="shinycode-insert" tabindex="5" accesskey="p" value="<?php _e('Insert this Shiny Code', 'shinycode') ?>"></p>
@@ -227,4 +267,5 @@ function wp_ajax_shinycode_box() {
         </div>
     </form>
 
-<?php }
+<?php die();
+}

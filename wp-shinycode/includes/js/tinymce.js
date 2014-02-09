@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
                 ed.execCommand(
                     'mceInsertContent',
                     false,
-                    shinycode_create_shortcode()
+                    shinycode_create()
                 );
                 tb_remove();
             });
@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
                 title : 'Shiny Code',
                 image : url+'/../images/shinycode-button.png',
                 onclick : function() {
-                    tb_show('Shinycode', ajaxurl+'?action=shinycode_ajax_shortcodes&width=600&height=410');
+                    tb_show('Shinycode', ajaxurl+'?action=shinycode_ajax_shortcodes&width=600&height=auto');
                     $("#TB_ajaxContent").css('overflow',"visible");
                     setTimeout(function() {
                         $('#TB_window').css({'height':'450px', 'marginTop':($(window).height()-450) / 2});
@@ -39,7 +39,7 @@ function shinycode_create() {
     for ( var a in inputs ) {
         if ( inputs[a].value == "" ||  inputs[a].value == undefined)
             continue;
-        if ( inputs[a].name=='shinycode-manual' )
+        if ( inputs[a].name=='shinycode-blockcode' )
             textarea = inputs[a].value;
         else {
             inputs[a].name = inputs[a].name.replace( 'shinycode-', '' );
