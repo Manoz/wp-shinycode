@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     tinymce.create('tinymce.plugins.sc', {
         init : function(ed, url) {
-            // Add code
+            // Insert our blockcode
             $(document).on( 'click','#shinycode-insert', function( e ) {
                 e.preventDefault();
                 ed.execCommand(
@@ -11,9 +11,11 @@ jQuery(document).ready(function($) {
                 );
                 tb_remove();
             });
+            // Add our shortcode button.
             ed.addButton('sc', {
                 title : 'Shiny Code',
                 image : url+'/../images/shinycode-button.png',
+                // On clique, open the AJAX window
                 onclick : function() {
                     tb_show('Shinycode', ajaxurl+'?action=shinycode_ajax_shortcodes&width=600&height=auto');
                     $("#TB_ajaxContent").css('overflow',"visible");
