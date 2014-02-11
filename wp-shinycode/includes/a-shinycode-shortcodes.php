@@ -27,24 +27,23 @@ function shinycode_shortcode( $atts, $content = "" ) {
 
     $geshi = new GeSHi( $source, $atts['language'] );
 
+    /* Configure GeShi. */
     $geshi->set_header_type(GESHI_HEADER_PRE_TABLE);
     $geshi->enable_classes();
     $geshi->enable_keyword_links(false);
 
-    // Set some temp constants for line numbers.
-    // I should find a way to do this with shortcodes settings.
-    $line_normal = GESHI_NORMAL_LINE_NUMBERS;
-    $line_fancy  = GESHI_FANCY_LINE_NUMBERS;
-    $line_hidden = GESHI_NO_LINE_NUMBERS;
-
     if ( $atts['linenumbers'] == 1 ) {
-        $geshi->enable_line_numbers($line_fancy, 1);
+        $geshi->enable_line_numbers(GESHI_FANCY_LINE_NUMBERS, 1);
     }
 
+    /* Our blockcodes are stored in $geshi. Parse the content and do the magic trick */
     $result = $geshi->parse_code();
+
+    // Temp. I should find a better way to do this
     $result = htmlspecialchars_decode( $result );
 
     if ( ! empty( $source ) ) {
+        // Enqueue styles only if we have a blockcode.
         wp_enqueue_style( 'shinycode-codecss' );
 
         $output = array();
@@ -62,6 +61,7 @@ function shinycode_shortcode( $atts, $content = "" ) {
     }
 }
 
+/* Clean our blockcodes by removing junk <br> or <p> tags */
 add_filter( 'shinycode_code', 'shinycode_code', 10, 3 );
 function shinycode_code( $source, $content ) {
     $source = esc_html( str_replace( array('<br>','<br />', '<br/>','</p>'."\n".'<pre><code>','</code></pre>'."\n".'<p>'), array(''), $content ) );
