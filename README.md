@@ -7,8 +7,8 @@ wp-shinycode
 
 ### Todo: 
 
-* [ ] Remove the shortcodes tags [shinycode] in the post
-* [ ] Perform the highlight with GeSHi (don't know how)
+* [x] Remove the shortcodes tags [shinycode] in the post
+* [x] Perform the highlight with GeSHi (don't know how)
 * [ ] Add some options to AJAX shortcodes (highlight lines, lines numbers,..)
 * [ ] Make the color scheme selection works
 * [ ] Add some options in the plugin settings page
