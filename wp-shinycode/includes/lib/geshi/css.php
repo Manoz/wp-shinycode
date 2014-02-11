@@ -69,8 +69,19 @@ $language_data = array (
         ),
     'KEYWORDS' => array(
         1 => array(
-            'aqua', 'azimuth', 'background-attachment', 'background-color',
-            'background-image', 'background-position', 'background-repeat',
+            '-moz-animation-delay', '-moz-animation-iteration-count',
+            '-moz-animation-name', '-ms-animation-delay',
+            '-ms-animation-iteration-count', '-ms-animation-name',
+            '-moz-box-sizing', '-moz-transform', '-ms-transform',
+            '-o-animation-iteration-count', '-o-animation-name', '-o-transform',
+            '-webkit-animation-delay', '-webkit-animation-iteration-count',
+            '-webkit-animation-name', '-webkit-box-shadow',
+            '-webkit-box-sizing', '-webkit-transform',
+            'align-content', 'animation-direction', 'animation-duration',
+            'animation-iteration-count', 'animation-name', 'aqua',
+            'azimuth', 'background-attachment', 'background-clip',
+            'background-color', 'background-image', 'background-position',
+            'background-repeat', 'background-size',
             'background', 'black', 'blue', 'border-bottom-color',
             'border-radius', 'border-top-left-radius', 'border-top-right-radius',
             'border-bottom-right-radius', 'border-bottom-left-radius',
@@ -80,25 +91,26 @@ $language_data = array (
             'border-top-color', 'border-top-style',
             'border-top-width','border-bottom', 'border-collapse',
             'border-left', 'border-width', 'border-color', 'border-spacing',
-            'border-style', 'border-top', 'border', 'caption-side', 'clear',
+            'border-style', 'border-top', 'border', 'box-shadow', 'box-sizing',
+            'caption-side', 'clear',
             'clip', 'color', 'content', 'counter-increment', 'counter-reset',
             'cue-after', 'cue-before', 'cue', 'cursor', 'direction', 'display',
-            'elevation', 'empty-cells', 'float', 'font-family', 'font-size',
+            'elevation', 'empty-cells', 'flex-flow', 'float', 'font-family', 'font-size',
             'font-size-adjust', 'font-stretch', 'font-style', 'font-variant',
             'font-weight', 'font', 'line-height', 'letter-spacing',
             'list-style', 'list-style-image', 'list-style-position',
             'list-style-type', 'margin-bottom', 'margin-left', 'margin-right',
             'margin-top', 'margin', 'marker-offset', 'marks', 'max-height',
-            'max-width', 'min-height', 'min-width', 'orphans', 'outline',
-            'outline-color', 'outline-style', 'outline-width', 'overflow',
+            'max-width', 'min-height', 'min-width', 'opacity', 'orphans', 'outline',
+            'outline-color', 'outline-style', 'outline-width', 'overflow', 'overflow-x',
             'padding-bottom', 'padding-left', 'padding-right', 'padding-top',
             'padding', 'page', 'page-break-after', 'page-break-before',
             'page-break-inside', 'pause-after', 'pause-before', 'pause',
             'pitch', 'pitch-range', 'play-during', 'position', 'quotes',
-            'richness', 'right', 'size', 'speak-header', 'speak-numeral',
+            'resize', 'richness', 'right', 'size', 'speak-header', 'speak-numeral',
             'speak-punctuation', 'speak', 'speech-rate', 'stress',
             'table-layout', 'text-align', 'text-decoration', 'text-indent',
-            'text-shadow', 'text-transform', 'top', 'unicode-bidi',
+            'text-shadow', 'text-transform', 'top', 'transform', 'unicode-bidi',
             'vertical-align', 'visibility', 'voice-family', 'volume',
             'white-space', 'widows', 'width', 'word-spacing', 'z-index',
             'bottom', 'left', 'height'
@@ -141,6 +153,20 @@ $language_data = array (
             'white', 'wider', 'x-fast', 'x-high', 'x-large', 'x-loud',
             'x-low', 'x-small', 'x-soft', 'xx-large', 'xx-small', 'yellow',
             'yes'
+            ),
+        3 => array(
+            'a', 'abbr', 'acronym', 'address', 'applet', 'article',
+            'aside', 'audio', 'b', 'bb', 'big', 'blockquote', 'body',
+            'canvas', 'caption', 'cite', 'code', 'datagrid',
+            'datalist', 'dd', 'del', 'details', 'dfn', 'dialog',
+            'div', 'dl', 'dt', 'em', 'eventsource', 'fieldset',
+            'figure', 'font', 'footer', 'form','h1', 'h2', 'h3', 'h4',
+            'h5', 'h6', 'header', 'html', 'i', 'iframe', 'img', 'ins',
+            'kbd', 'label', 'legend', 'li', 'mark', 'menu', 'meter',
+            'nav', 'object', 'ol', 'output', 'p', 'pre', 'progress',
+            'q', 's', 'samp', 'section', 'small', 'span', 'strike',
+            'strong', 'sub', 'sup', 'tbody', 'td', 'tfoot',
+            'th', 'thead', 'time', 'tr', 'tt', 'u', 'ul', 'var', 'video'
             )
         ),
     'SYMBOLS' => array(
@@ -155,7 +181,8 @@ $language_data = array (
     'STYLES' => array(
         'KEYWORDS' => array(
             1 => 'color: #000000; font-weight: bold;',
-            2 => 'color: #993333;'
+            2 => 'color: #993333;',
+            3 => 'color: #AA1F63;'
             ),
         'COMMENTS' => array(
             1 => 'color: #a1a100;',

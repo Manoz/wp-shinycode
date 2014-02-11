@@ -2161,6 +2161,15 @@ class GeSHi {
         $code = str_replace("\r\n", "\n", $this->source);
         $code = str_replace("\r", "\n", $code);
 
+        $code = str_replace("&gt;", ">", $code);
+        $code = str_replace("&lt;", "<", $code);
+        $code = str_replace("&lsaquo;", "‹", $code);
+        $code = str_replace("&rsaquo;", "›", $code);
+        $code = str_replace("&#039;", "'", $code);
+        $code = str_replace("&quot;", "\"", $code);
+        $code = str_replace("&amp;", "&", $code);
+
+
         // Firstly, if there is an error, we won't highlight
         if ($this->error) {
             //Escape the source for output

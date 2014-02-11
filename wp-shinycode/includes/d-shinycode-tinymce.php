@@ -55,7 +55,7 @@ function wp_ajax_shinycode_box() {
                                         <optgroup label="<?php _e( 'Select a language', 'shinycode' ); ?>">
                                         <?php
                                         $langs  = array(
-                                            'markup'        => 'HTML',
+                                            'HTML5'         => 'HTML',
                                             'css'           => 'CSS',
                                             'javascript'    => 'JavaScript',
                                             'jquery'        => 'jQuery',
@@ -82,6 +82,14 @@ function wp_ajax_shinycode_box() {
                             </th>
                         </tr>
 
+                        <tr valign="top" class="field">
+                            <th class="label" scope="row">
+                                <label for="linenumbers"><?php _e('Show line numbers?', 'shinycode'); ?></label>
+                            </th>
+                            <td>
+                                <input type="checkbox" name="linenumbers" id="linenumbers" value="1" />
+                            </td>
+                        </tr>
 
                         <tr valign="top" class="field">
                             <th class="label" scope="row">

@@ -33,6 +33,15 @@ function shinycode_row_meta( $links, $file ) {
 }
 
 /**
+ * Register our styles/scripts
+ * @since 1.0.0
+ */
+add_action( 'wp_enqueue_scripts', 'shinycode_enqueue_styles' );
+function shinycode_enqueue_styles() {
+    wp_register_style( 'shinycode-codecss', plugins_url( '/css/themes/default.css', __FILE__ ), false, /*SHINYCODE_VERSION,*/ 'all' );
+}
+
+/**
  * Add our menu page
  * @since 1.0.0
  */
