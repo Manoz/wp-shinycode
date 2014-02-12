@@ -36,4 +36,3 @@ require_once( "$path/includes/a-shinycode-shortcodes.php" );    // Load shortcod
 require_once( "$path/includes/b-shinycode-admin.php" );         // Load admin page stuff
 require_once( "$path/c-shinycode-install.php" );                // Load install/uninstall stuff
 require_once( "$path/includes/d-shinycode-tinymce.php" );       // Build shortcodes button and AJAX window
-//require_once( "$path/includes/lib/geshi.php");                  // Load GeShi
