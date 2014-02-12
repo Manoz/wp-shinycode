@@ -75,6 +75,33 @@ function wp_ajax_shinycode_box() {
 
                         <tr valign="top" class="field">
                             <th class="label" scope="row">
+                                <label for="theme"><?php _e('Choose a theme', 'shinycode'); ?></label>
+                                <td>
+                                    <select name="theme" id="theme">
+                                        <optgroup label="<?php _e( 'Choose a theme', 'shinycode' ); ?>">
+                                        <?php
+                                        $tms = array(
+                                            'default'   => 'Default',
+                                            'b16-od'    => 'Base16 Ocean Dark',
+                                            'b16-ol'    => 'Base16 Ocean Light',
+                                            'b16-td'    => 'Base16 Tomorrow Dark',
+                                            'b16-tl'    => 'Base16 Tomorrow Light',
+                                            'sc-git'    => 'Github',
+                                            'sc-mono'   => 'Monokai',
+                                        );
+                                        $tms = apply_filters( 'shinycode_themes', $tms );
+                                        foreach( $tms as $t => $tm )
+                                            echo '<option value="' . $t . '">' . $tm . '</value>';
+                                        unset( $t );
+                                        ?>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </th>
+                        </tr>
+
+                        <tr valign="top" class="field">
+                            <th class="label" scope="row">
                                 <label for="title"><?php _e('Add a title', 'shinycode'); ?></label>
                                 <td>
                                     <input type="text" name="title" id="title" placeholder="<?php _e('Title for your blockcode', 'shinycode'); ?>"/>

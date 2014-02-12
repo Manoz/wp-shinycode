@@ -1,0 +1,69 @@
+/*
+ * Theme:   Github
+ * @author  Github
+ * @since   1.0.0
+ */
+
+/*
+GeShi css classes works very simply.
+They depend on the contents of the languages​​ files.
+For example, in the file 'php.php', the keywords are
+in 4 array. The following classes will be utilized:
+.kw1, .kw2, .kw3 and .kw4
+
+Also in the file 'php.php', they are 4 array for comments.
+The following classes will be utilized:
+.co1, .co2, .co3 and .co4 .
+
+The default theme is built to give a color
+to each class, regardless of the language.
+
+If you want to create a theme, remember to take into consideration each array.
+*/
+
+.shinycode-blockcode.sc-git,
+.shinycode-blockcode.sc-git table,
+.shinycode-blockcode.sc-git td.de1 {background-color: #f8f8ff;}
+
+.shinycode-blockcode.sc-git td.ln {background-color: #ececec;}
+
+/* Global code color */
+.shinycode-blockcode.sc-git pre.de1 {color: #555;}
+
+/* Comments */
+.sc-git span.co1 {color: #555; font-weight: bold;}
+.sc-git span.co2 {color: #d14;}
+.sc-git span.co3 {color: #d14;}
+.sc-git span.co4 {color: #d14;}
+.sc-git span.coMULTI {color: #d14;}
+
+/* Keywords */
+.sc-git span.kw1 {color: #555;}
+.sc-git span.kw2 {color: #000;}
+.sc-git span.kw3 {color: #445588; font-weight: bold;}
+.sc-git span.kw4 {color: #AA2063; font-weight: bold;}
+
+/* Punctuation */
+.sc-git span.sy0 {color: #333;}
+.sc-git span.sy1 {color: #333;}
+.sc-git span.br0 {color: #333;}
+
+/* Strings */
+.sc-git span.st0 {color: #d14;}
+.sc-git span.st_h {color: #d14;}
+
+/* Methods */
+.sc-git span.me1 {color: #7520AF;}
+.sc-git span.me2 {color: #7520AF;}
+
+/* Tags & tags attribute */
+.sc-git span.re0 {color: #445588; font-weight: bold;}
+.sc-git span.re1 {color: #445588; font-weight: bold;}
+.sc-git span.re2 {color: #445588; font-weight: bold;}
+.sc-git span.re3 {color: #099; }
+
+/* Numbers */
+.sc-git span.nu0 {color: #009999;}
+
+/* Escape chars */
+.sc-git .es0 {color: #ED7722;}

@@ -18,6 +18,7 @@ function shinycode_shortcode( $atts, $content = "" ) {
 
     $atts = shortcode_atts( array(
         'language'      => 'HTML5',
+        'theme'         => 'default',
         'title'         => '',
         'linenumbers'   => '',
         'highlight'     => '',
@@ -44,7 +45,9 @@ function shinycode_shortcode( $atts, $content = "" ) {
 
     if ( ! empty( $source ) ) {
         // Enqueue styles only if we have a blockcode.
-        wp_enqueue_style( 'shinycode-codecss' );
+        if ( $atts['theme'] == 'default' ) wp_enqueue_style( 'shinycode-codecss' );
+        if ( $atts['theme'] == 'sc-git' ) wp_enqueue_style( 'shinycode-git' );
+        if ( $atts['theme'] == 'b16-ol' ) wp_enqueue_style( 'shinycode-b16-ol' );
 
         $output = array();
 
@@ -52,7 +55,7 @@ function shinycode_shortcode( $atts, $content = "" ) {
             $output[] = '<span class="shinycode-title">' . esc_html( $atts['title'] ) . '</span>';
         }
 
-        $output[] = '<div class="shinycode-blockcode">';
+        $output[] = '<div class="shinycode-blockcode ' . esc_html( $atts['theme'] ) . ' ">';
         $output[] = $result;
         $output[] = '</div>';
         $output = implode( "\n", $output );

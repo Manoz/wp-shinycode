@@ -18,29 +18,76 @@
     background-color: #fff;
 }
 
+/* I set default styles to avoid problems with your blog theme. */
+.shinycode-blockcode th,
+.shinycode-blockcode td {
+    padding: 0;
+}
+
+.shinycode-blockcode th,
+.shinycode-blockcode td,
+.shinycode-blockcode table {
+    border: 0;
+}
+
+.shinycode-blockcode pre {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+    color: #aaa;
+    color: rgba(0,0,0,0.3);
+    background: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 /* =Line numbers
 -------------------------------------------------------------------- */
 
 /* <td> line numbers */
 td.ln {
     width: 1%;
-    padding-right: 8px;
-    padding-left: 8px;
+    padding: 6px 8px;
     border: 0;
     border-right: 1px solid #e5e5e5;
     text-align: right;
     font-family: Consolas,"Liberation Mono",Courier,monospace;
     font-size: 13px;
+    line-height: 1.6;
     vertical-align: top;
 }
 
 /* Line numbers are in <pre> tag */
 td.ln pre.de1 {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+
     margin: 0;
     padding: 0;
     border: 0;
+
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
     color: #aaa;
     color: rgba(0,0,0,0.3);
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 /* <span> Line numbers */
@@ -54,10 +101,12 @@ td.ln span.li2 {
 -------------------------------------------------------------------- */
 
 td.de1 {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     border: 0;
+    line-height: 1.6;
     white-space: nowrap;
+    background-color: #fff;
 }
 
 /* Add .shinycode-blockcode if line numbers are disabled */
@@ -92,31 +141,51 @@ span.xtra.li2 {
 /* =Syntax coloration
 -------------------------------------------------------------------- */
 
+/*
+GeShi css classes works very simply.
+They depend on the contents of the languages​​ files.
+For example, in the file 'php.php', the keywords are
+in 4 array. The following classes will be utilized:
+.kw1, .kw2, .kw3 and .kw4
+
+Also in the file 'php.php', they are 4 array for comments.
+The following classes will be utilized:
+.co1, .co2, .co3 and .co4 .
+
+The default theme is built to give a color
+to each class, regardless of the language.
+
+If you want to create a theme, remember to take into consideration each array.
+*/
+
 /* Global code color */
 .shinycode-blockcode pre.de1 {color: #333;}
 
-/* Multilines Comments */
+/* Comments */
+span.co1 {color: #3C802C;}
+span.co2 {color: #3C802C;}
+span.co3 {color: #3C802C;}
 span.co4 {color: #3C802C;}
 span.coMULTI {color: #3C802C;}
-
-/* Single comment */
-span.co1 {color: #3C802C;}
 
 /* Keywords */
 span.kw1 {color: #AA2063;}
 span.kw2 {color: #881181;}
 span.kw3 {color: #F02A1D;}
+span.kw4 {color: #AA2063;}
 
 /* Punctuation */
 span.sy0 {color: #333;}
+span.sy1 {color: #333;}
 span.br0 {color: #333;}
 
 /* Strings */
 span.st0 {color: #ED7722;}
 span.st_h {color: #ED7722;}
 
-/* Library function */
+/* Methods */
 span.me1 {color: #7520AF;}
+span.me2 {color: #7520AF;}
 
 /* Tags & tags attribute */
 span.re0 {color: #881181;}
@@ -126,3 +195,6 @@ span.re3 {color: #0F20F6;}
 
 /* Numbers */
 span.nu0 {color: #0F20F6;}
+
+/* Escape chars */
+.es0 {color: #ED7722;}

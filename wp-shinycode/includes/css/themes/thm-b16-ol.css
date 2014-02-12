@@ -1,0 +1,72 @@
+/*
+ * Theme:   Base16 Ocean Light
+ * @author  Chris Kempson
+ * @link    https://github.com/chriskempson/base16
+ * @since   1.0.0
+ */
+
+/*
+GeShi css classes works very simply.
+They depend on the contents of the languages​​ files.
+For example, in the file 'php.php', the keywords are
+in 4 array. The following classes will be utilized:
+.kw1, .kw2, .kw3 and .kw4
+
+Also in the file 'php.php', they are 4 array for comments.
+The following classes will be utilized:
+.co1, .co2, .co3 and .co4 .
+
+The default theme is built to give a color
+to each class, regardless of the language.
+
+If you want to create a theme, remember to take into consideration each array.
+*/
+
+.shinycode-blockcode.b16-ol,
+.shinycode-blockcode.b16-ol table,
+.shinycode-blockcode.b16-ol td.de1 {background-color: #EFF1F5;}
+
+.shinycode-blockcode.b16-ol td.ln {background-color: #E9ECF1;}
+
+/* Global code color */
+.shinycode-blockcode.b16-ol pre.de1 {color: #4F5B66;}
+.shinycode-blockcode.b16-ol .ln .de1 {color: #B7C0D2;}
+
+/* Comments */
+.b16-ol span.co1 {color: #B48EAD;}
+.b16-ol span.co2 {color: #d14;}
+.b16-ol span.co3 {color: #d14;}
+.b16-ol span.co4 {color: #d14;}
+.b16-ol span.coMULTI {color: #d14;}
+
+/* Keywords */
+.b16-ol span.kw1 {color: #555;}
+.b16-ol span.kw2 {color: #4F5B66;}
+.b16-ol span.kw3 {color: #BF616A;}
+.b16-ol span.kw4 {color: #AA2063;}
+
+/* Punctuation */
+.b16-ol span.sy0 {color: #4F5B66;}
+.b16-ol span.sy1 {color: #4F5B66;}
+.b16-ol span.br0 {color: #4F5B66;}
+
+/* Strings */
+.b16-ol span.st0 {color: #A3BE8C;}
+.b16-ol span.st_h {color: #A3BE8C;}
+
+/* Methods */
+.b16-ol span.me1 {color: #7520AF;}
+.b16-ol span.me2 {color: #7520AF;}
+
+/* Tags & tags attribute */
+.b16-ol span.re0 {color: #D08770;}
+.b16-ol span.re1 {color: #D08770;}
+.b16-ol span.re2 {color: #D08770;}
+.b16-ol span.re3 {color: #D08770;}
+
+/* Numbers */
+.b16-ol span.nu0 {color: #D08770;}
+
+/* Escape chars */
+.b16-ol .es0 {color: #ED7722;}
+
