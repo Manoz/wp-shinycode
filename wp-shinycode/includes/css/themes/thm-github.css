@@ -4,66 +4,158 @@
  * @since   1.0.0
  */
 
-/*
-GeShi css classes works very simply.
-They depend on the contents of the languages​​ files.
-For example, in the file 'php.php', the keywords are
-in 4 array. The following classes will be utilized:
-.kw1, .kw2, .kw3 and .kw4
+/* =Default styles
+-------------------------------------------------------------------- */
 
-Also in the file 'php.php', they are 4 array for comments.
-The following classes will be utilized:
-.co1, .co2, .co3 and .co4 .
+.shinycode-blockcode {
+    margin-bottom: 1.6em;
+    border: 1px solid #ededed;
+    line-height: 1.5em;
+    background-color: #fff;
+}
 
-The default theme is built to give a color
-to each class, regardless of the language.
+.shinycode-blockcode table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-collapse: separate;
+    background-color: #fff;
+}
 
-If you want to create a theme, remember to take into consideration each array.
-*/
+.shinycode-blockcode th,
+.shinycode-blockcode td {
+    padding: 0;
+}
+
+.shinycode-blockcode th,
+.shinycode-blockcode td,
+.shinycode-blockcode table {
+    border: 0;
+}
+
+.shinycode-blockcode pre {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+    color: #aaa;
+    color: rgba(0,0,0,0.3);
+    background: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+td.ln {
+    width: 1%;
+    padding: 6px 8px;
+    border: 0;
+    border-right: 1px solid #e5e5e5;
+    text-align: right;
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    vertical-align: top;
+}
+
+td.ln pre.de1 {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+
+    color: #aaa;
+    color: rgba(0,0,0,0.3);
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+td.ln span.li2 {
+    display: block;
+    padding: 0 8px;
+    color: inherit;
+}
+
+td.de1 {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 0;
+    line-height: 1.6;
+    white-space: nowrap;
+    background-color: #fff;
+}
+
+td.de1 pre.de1,
+.shinycode-blockcode pre.de1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    font-size: 12px;
+}
+
+span.xtra.li2 {
+    display: block;
+    padding-left: 10px;
+}
+
+.shinycode-title {
+    display: block;
+    padding: 3px 0;
+    border: 1px solid #ededed;
+    border-bottom: 0;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #fafafa;
+}
+
+/* =Github color scheme
+-------------------------------------------------------------------- */
 
 .shinycode-blockcode.sc-git,
 .shinycode-blockcode.sc-git table,
 .shinycode-blockcode.sc-git td.de1 {background-color: #f8f8ff;}
-
 .shinycode-blockcode.sc-git td.ln {background-color: #ececec;}
-
-/* Global code color */
-.shinycode-blockcode.sc-git pre.de1 {color: #555;}
-
-/* Comments */
+.shinycode-blockcode.sc-git pre.de1 {color: #000;}
 .sc-git span.co1 {color: #555; font-weight: bold;}
 .sc-git span.co2 {color: #d14;}
 .sc-git span.co3 {color: #d14;}
 .sc-git span.co4 {color: #d14;}
 .sc-git span.coMULTI {color: #d14;}
-
-/* Keywords */
 .sc-git span.kw1 {color: #555;}
 .sc-git span.kw2 {color: #000;}
 .sc-git span.kw3 {color: #445588; font-weight: bold;}
 .sc-git span.kw4 {color: #AA2063; font-weight: bold;}
-
-/* Punctuation */
 .sc-git span.sy0 {color: #333;}
 .sc-git span.sy1 {color: #333;}
 .sc-git span.br0 {color: #333;}
-
-/* Strings */
 .sc-git span.st0 {color: #d14;}
 .sc-git span.st_h {color: #d14;}
-
-/* Methods */
 .sc-git span.me1 {color: #7520AF;}
 .sc-git span.me2 {color: #7520AF;}
-
-/* Tags & tags attribute */
 .sc-git span.re0 {color: #445588; font-weight: bold;}
 .sc-git span.re1 {color: #445588; font-weight: bold;}
-.sc-git span.re2 {color: #445588; font-weight: bold;}
+.sc-git span.re2 {color: #000;}
 .sc-git span.re3 {color: #099; }
-
-/* Numbers */
 .sc-git span.nu0 {color: #009999;}
-
-/* Escape chars */
 .sc-git .es0 {color: #ED7722;}
