@@ -51,54 +51,28 @@
 
 $language_data = array (
     'LANG_NAME' => 'HTML5',
-    'COMMENT_SINGLE' => array(),
-    'COMMENT_MULTI' => array(),
+    'COMMENT_SINGLE' => array('<!--' => '-->'),
+    'COMMENT_MULTI' => array('<!--' => '-->'),
+    // TODO: fix this regex 'COMMENT_REGEXP' => array(2 => "/(?<=\\()\\s*(?:(?:[a-z0-9]+?:\\/\\/)?[a-z0-9_\\-\\.\\/:]+?)?[a-z]+?\\.[a-z]+?(\\?[^\)]+?)?\\s*?(?=\\))/i"),
     'CASE_KEYWORDS' => GESHI_CAPS_NO_CHANGE,
     'QUOTEMARKS' => array("'", '"'),
     'ESCAPE_CHAR' => '',
     'KEYWORDS' => array(
         2 => array(
             'a', 'abbr', 'address', 'article', 'area', 'aside', 'audio',
-
-            'base', 'bdo', 'blockquote', 'body', 'br', 'button', 'b',
-
-            'caption', 'cite', 'code', 'colgroup', 'col', 'canvas', 'command', 'datalist', 'details',
-
-            'dd', 'del', 'dfn', 'div', 'dl', 'dt',
-
-            'em', 'embed',
-
-            'fieldset', 'form', 'figcaption', 'figure', 'footer',
-
-            'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'hr', 'html', 'header', 'hgroup',
-
-            'iframe', 'ilayer', 'img', 'input', 'ins', 'isindex', 'i',
-
-            'kbd', 'keygen',
-
-            'label', 'legend', 'link', 'li',
-
-            'map', 'meta', 'mark', 'meter',
-
-            'noscript', 'nav',
-
-            'object', 'ol', 'optgroup', 'option', 'output',
-
-            'param', 'pre', 'p', 'progress',
-
-            'q',
-
-            'rp', 'rt', 'ruby',
-
-            'samp', 'script', 'select', 'small', 'span', 'strong', 'style', 'sub', 'sup', 's', 'section', 'source', 'summary',
-
-            'table', 'tbody', 'td', 'textarea', 'text', 'tfoot', 'thead', 'th', 'title', 'tr', 'time',
-
-            'ul',
-
-            'var', 'video',
-
-            'wbr',
+            'base', 'bdo', 'blockquote', 'body', 'br', 'button', 'b', 'caption',
+            'cite', 'code', 'colgroup', 'col', 'canvas', 'command', 'datalist',
+            'details', 'dd', 'del', 'dfn', 'div', 'dl', 'dt', 'em', 'embed',
+            'fieldset', 'form', 'figcaption', 'figure', 'footer', 'h1', 'h2',
+            'h3', 'h4', 'h5', 'h6', 'head', 'hr', 'html', 'header', 'hgroup',
+            'iframe', 'ilayer', 'img', 'input', 'ins', 'isindex', 'i', 'kbd',
+            'keygen', 'label', 'legend', 'link', 'li', 'main', 'map', 'meta',
+            'mark', 'meter', 'noscript', 'nav', 'object', 'ol', 'optgroup', 'option',
+            'output', 'param', 'php', 'pre', 'p', 'progress', 'q', 'rp', 'rt', 'ruby',
+            'samp', 'script', 'select', 'small', 'span', 'strong', 'style', 'sub',
+            'sup', 's', 'section', 'source', 'summary', 'table', 'tbody', 'td',
+            'textarea', 'text', 'tfoot', 'thead', 'th', 'title', 'tr', 'time',
+            'ul', 'var', 'video', 'wbr',
             ),
         3 => array(
             'abbr', 'accept-charset', 'accept', 'accesskey', 'action', 'align', 'alink', 'alt', 'archive', 'axis', 'autocomplete', 'autofocus',
@@ -202,11 +176,10 @@ $language_data = array (
     'PARSER_CONTROL' => array(
         'KEYWORDS' => array(
             2 => array(
+                // Todo, find a fix. GeSHi actually hide all the <?php tags
                 'DISALLOWED_BEFORE' => '(?<=&lt;|&lt;\/)',
                 'DISALLOWED_AFTER' => '(?=\s|\/|&gt;)',
             )
         )
     )
 );
-
-?>

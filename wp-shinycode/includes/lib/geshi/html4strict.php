@@ -180,11 +180,10 @@ $language_data = array (
     'PARSER_CONTROL' => array(
         'KEYWORDS' => array(
             2 => array(
+                // Todo, find a fix. GeSHi actually hide all the <?php tags
                 'DISALLOWED_BEFORE' => '(?<=&lt;|&lt;\/)',
                 'DISALLOWED_AFTER' => '(?=\s|\/|&gt;)',
             )
         )
     )
 );
-
-?>

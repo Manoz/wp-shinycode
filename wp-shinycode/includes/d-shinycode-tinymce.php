@@ -2,13 +2,13 @@
 /**
  * Build shortcodes button and AJAX window
  * @package WP Shiny Code
- * @since 1.0.0
+ * @since 0.0.1
  */
-if ( !defined( 'ABSPATH' )) { exit(); }
+if ( !defined( 'ABSPATH' )) exit();
 
 /**
  * Add TinyMCE shortcodes button
- * @since 1.0.0
+ * @since 0.0.1
  */
 add_action( 'admin_init', 'shinycode_tinymce_button' );
 function shinycode_tinymce_button() {

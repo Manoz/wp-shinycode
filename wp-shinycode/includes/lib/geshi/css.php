@@ -51,7 +51,7 @@
 
 $language_data = array (
     'LANG_NAME' => 'CSS',
-    'COMMENT_SINGLE' => array(1 => '@'),
+    'COMMENT_SINGLE' => array('/*' => '*/'),
     'COMMENT_MULTI' => array('/*' => '*/'),
     'COMMENT_REGEXP' => array(
         2 => "/(?<=\\()\\s*(?:(?:[a-z0-9]+?:\\/\\/)?[a-z0-9_\\-\\.\\/:]+?)?[a-z]+?\\.[a-z]+?(\\?[^\)]+?)?\\s*?(?=\\))/i"
@@ -116,50 +116,53 @@ $language_data = array (
             'bottom', 'left', 'height'
             ),
         2 => array(
+            '-webkit-box',
             'above', 'absolute', 'always', 'armenian', 'aural', 'auto',
             'avoid', 'baseline', 'behind', 'below', 'bidi-override', 'blink',
-            'block', 'bold', 'bolder', 'both', 'capitalize', 'center-left',
-            'center-right', 'center', 'circle', 'cjk-ideographic',
-            'close-quote', 'collapse', 'condensed', 'continuous', 'crop',
-            'crosshair', 'cross', 'cursive', 'dashed', 'decimal-leading-zero',
-            'decimal', 'default', 'digits', 'disc', 'dotted', 'double',
-            'e-resize', 'embed', 'extra-condensed', 'extra-expanded',
+            'block', 'bold', 'bolder', 'border-box', 'both', 'capitalize',
+            'center-left', 'center-right', 'center', 'circle', 'cjk-ideographic',
+            'close-quote', 'collapse', 'condensed', 'content-box', 'continuous',
+            'cover', 'crop', 'crosshair', 'cross', 'cursive', 'dashed',
+            'decimal-leading-zero', 'decimal', 'default', 'digits', 'disc', 'dotted',
+            'double', 'e-resize', 'embed', 'extra-condensed', 'extra-expanded',
             'expanded', 'fantasy', 'far-left', 'far-right', 'faster', 'fast',
-            'fixed', 'fuchsia', 'georgian', 'gray', 'green', 'groove',
+            'fixed', 'flex', 'fuchsia', 'georgian', 'gray', 'green', 'groove',
             'hebrew', 'help', 'hidden', 'hide', 'higher', 'high',
-            'hiragana-iroha', 'hiragana', 'icon', 'inherit', 'inline-table',
-            'inline', 'inset', 'inside', 'invert', 'italic', 'justify',
-            'katakana-iroha', 'katakana', 'landscape', 'larger', 'large',
-            'left-side', 'leftwards', 'level', 'lighter', 'lime',
-            'line-through', 'list-item', 'loud', 'lower-alpha', 'lower-greek',
-            'lower-roman', 'lowercase', 'ltr', 'lower', 'low', 'maroon',
-            'medium', 'message-box', 'middle', 'mix', 'monospace', 'n-resize',
-            'narrower', 'navy', 'ne-resize', 'no-close-quote',
+            'hiragana-iroha', 'hiragana', 'icon', 'inherit', 'inline-block',
+            'inline-table', 'inline', 'inset', 'inside', 'invert', 'italic',
+            'justify', 'katakana-iroha', 'katakana', 'landscape', 'larger',
+            'large', 'left-side', 'leftwards', 'level', 'lighter', 'lime',
+            'line-through', 'linear-gradient', 'list-item', 'loud', 'lower-alpha',
+            'lower-greek', 'lower-roman', 'lowercase', 'ltr', 'lower', 'low',
+            'maroon', 'medium', 'message-box', 'middle', 'mix', 'monospace',
+            'n-resize', 'narrower', 'navy', 'ne-resize', 'no-close-quote',
             'no-open-quote', 'no-repeat', 'none', 'normal', 'nowrap',
             'nw-resize', 'oblique', 'olive', 'once', 'open-quote', 'outset',
             'outside', 'overline', 'pointer', 'portrait', 'purple', 'px',
             'red', 'relative', 'repeat-x', 'repeat-y', 'repeat', 'rgb',
-            'ridge', 'right-side', 'rightwards', 's-resize', 'sans-serif',
-            'scroll', 'se-resize', 'semi-condensed', 'semi-expanded',
+            'ridge', 'right-side', 'rightwards', 'row', 'run-in', 's-resize',
+            'sans-serif', 'scroll', 'se-resize', 'semi-condensed', 'semi-expanded',
             'separate', 'serif', 'show', 'silent', 'silver', 'slow', 'slower',
-            'small-caps', 'small-caption', 'smaller', 'soft', 'solid',
-            'spell-out', 'square', 'static', 'status-bar', 'super',
+            'small-caps', 'small-caption', 'smaller', 'soft', 'solid', 'space-around',
+            'spell-out', 'square', 'static', 'status-bar', 'super', 'table',
             'sw-resize', 'table-caption', 'table-cell', 'table-column',
             'table-column-group', 'table-footer-group', 'table-header-group',
             'table-row', 'table-row-group', 'teal', 'text', 'text-bottom',
             'text-top', 'thick', 'thin', 'transparent', 'ultra-condensed',
             'ultra-expanded', 'underline', 'upper-alpha', 'upper-latin',
             'upper-roman', 'uppercase', 'url', 'visible', 'w-resize', 'wait',
-            'white', 'wider', 'x-fast', 'x-high', 'x-large', 'x-loud',
+            'white', 'wider', 'wrap', 'x-fast', 'x-high', 'x-large', 'x-loud',
             'x-low', 'x-small', 'x-soft', 'xx-large', 'xx-small', 'yellow',
             'yes'
             ),
         3 => array(
-            'a', 'abbr', 'acronym', 'address', 'applet', 'article',
-            'aside', 'audio', 'b', 'bb', 'big', 'blockquote', 'body',
-            'canvas', 'caption', 'cite', 'code', 'datagrid',
-            'datalist', 'dd', 'del', 'details', 'dfn', 'dialog',
-            'div', 'dl', 'dt', 'em', 'eventsource', 'fieldset',
+            '@-moz-keyframes', '@-ms-keyframes', '@-o-keyframes',
+            '@-webkit-keyframes', '@font-face', '@keyframes',
+            '@variables', 'a', 'abbr', 'acronym', 'address',
+            'applet', 'article', 'aside', 'audio', 'b', 'bb', 'big',
+            'blockquote', 'body', 'canvas', 'caption', 'cite', 'code',
+            'datagrid', 'datalist', 'dd', 'del', 'details', 'dfn',
+            'dialog', 'div', 'dl', 'dt', 'em', 'eventsource', 'fieldset',
             'figure', 'font', 'footer', 'form','h1', 'h2', 'h3', 'h4',
             'h5', 'h6', 'header', 'html', 'i', 'iframe', 'img', 'ins',
             'kbd', 'label', 'legend', 'li', 'mark', 'menu', 'meter',
@@ -235,7 +238,7 @@ $language_data = array (
         //note: & is needed for &gt; (i.e. > )
         2 => '(?<!\\\\):(?!\d)[a-zA-Z0-9\-]+\b(?:\s*(?=[\{\.#a-zA-Z,:+*&](.|\n)|<\|))',
         //Measurements
-        3 => '[+\-]?(\d+|(\d*\.\d+))(em|ex|pt|px|cm|in|%)',
+        3 => '[+\-]?(\d+|(\d*\.\d+))(em|ex|pt|px|cm|in|%)'
         ),
     'STRICT_MODE_APPLIES' => GESHI_NEVER,
     'SCRIPT_DELIMITERS' => array(
@@ -250,5 +253,3 @@ $language_data = array (
         )
     )
 );
-
-?>

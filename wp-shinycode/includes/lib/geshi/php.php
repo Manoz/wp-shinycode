@@ -90,9 +90,7 @@ $language_data = array(
             'as','break','case','continue','default','do','else','elseif',
             'endfor','endforeach','endif','endswitch','endwhile','for',
             'foreach','if','include','include_once','require','require_once',
-            'return','switch','throw','while',
-
-            'echo','print'
+            'return','switch','throw','while', 'echo','print'
             ),
         2 => array(
             '&amp;new','&lt;/script&gt;','&lt;?php','&lt;script language',
@@ -1113,5 +1111,3 @@ $language_data = array(
         ),
     'TAB_WIDTH' => 4
 );
-
-?>

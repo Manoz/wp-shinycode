@@ -2,59 +2,35 @@
 /**
  * Shinycode Admin stuff.
  * @package WP Shiny Code
- * @since 1.0.0
+ * @since 0.0.1
  */
-if ( !defined( 'ABSPATH' )) { exit(); }
-
-/**
- * Add a "settings" link in plugins page
- * @since 1.0.0
- */
-add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'shinycode_action_links', 10, 2 );
-function shinycode_action_links( $links ) {
-    $new_links = array();
-
-    $new_links[] = '<a href="options-general.php?page=shinycode.php">' . __('Settings', 'shinycode') . '</a>';
-    return array_merge($new_links, $links);
-}
-
-/**
- * Add some useful links in plugins page (row meta)
- * @todo add URL to FAQ and Support.
- * @since 1.0.0
- */
-add_filter( 'plugin_row_meta', 'shinycode_row_meta', 10, 2 );
-function shinycode_row_meta( $links, $file ) {
-    if ( $file == basename( dirname( __FILE__ ) ) . '/' . basename( __FILE__ ) ) {
-        $links[] = '<a title="' . __( 'Visit FAQ page', 'shinycode' ) . '" href="#faq">' . __( 'FAQ', 'shinycode' ) . '</a>';
-        $links[] = '<a title="' . __( 'Visit Support page', 'shinycode' ) . '" href="#support">' . __( 'Support', 'shinycode' ) . '</a>';
-    }
-    return $links;
-}
+if ( !defined( 'ABSPATH' )) exit();
 
 /**
  * Register our styles/scripts
- * @since 1.0.0
+ * @since 0.0.1
  */
-add_action( 'wp_enqueue_scripts', 'shinycode_enqueue_styles' );
-function shinycode_enqueue_styles() {
-    wp_register_style( 'shinycode-codecss', plugins_url( '/css/themes/default.css', __FILE__ ), false, /*SHINYCODE_VERSION,*/ 'all' );
-    wp_register_style( 'shinycode-git', plugins_url( '/css/themes/thm-github.css', __FILE__ ), false, 'all' );
-    wp_register_style( 'shinycode-b16-ol', plugins_url( '/css/themes/thm-b16-ol.css', __FILE__ ), false, 'all' );
+add_action( 'wp_enqueue_scripts', 'shinycode_enqueue_style' );
+function shinycode_enqueue_style() {
+    wp_register_style( 'shinycode-codecss', plugins_url( '/css/themes/default.css', __FILE__ ), 'responsive-style-css');
+    wp_register_style( 'shinycode-git',     plugins_url( '/css/themes/thm-github.css', __FILE__ ), 'responsive-style-css');
+    wp_register_style( 'shinycode-b16-ol',  plugins_url( '/css/themes/thm-b16-ol.css', __FILE__ ), 'responsive-style-css');
 }
 
 /**
  * Add our menu page
- * @since 1.0.0
+ * @since 0.0.1
  */
 add_action( 'admin_menu', 'shinycode_admin_menu' );
 function shinycode_admin_menu() {
-    add_options_page(
-        'WP Shinycode',             // Page title
-        'WP Shinycode',             // Menu title
-        'manage_options',           // Capability
-        'shinycode',                // Menu slug
-        'shinycode_settings_page'   // Function to do
+    add_menu_page(
+        'WP Shinycode',             // $page_title
+        'WP Shinycode',             // $menu_title
+        'manage_options',           // $capability
+        'shinycode',                // $menu_slug
+        'shinycode_settings_page',  // $function
+        'dashicons-share-alt',      // $icon_url - plugins_url( 'myplugin/images/icon.png' )
+        81                          // $position
     );
 
     // Register our settings during admin menu
@@ -116,7 +92,7 @@ function shinycode_admin_menu() {
 
 /**
  * Build our settings page
- * @since 1.0.0
+ * @since 0.0.1
  */
 function shinycode_settings_page() {
 ?>

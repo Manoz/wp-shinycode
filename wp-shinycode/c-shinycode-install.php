@@ -2,13 +2,13 @@
 /**
  * Activation and deactivation hooks
  * @package WP Shiny Code
- * @since 1.0.0
+ * @since 0.0.1
  */
-if ( !defined( 'ABSPATH' )) { exit(); }
+if ( !defined( 'ABSPATH' )) exit();
 
 /**
- * Register our activation/deactivation hooks
- * @since 1.0.0
+ * Register our activation/deactivation hook
+ * @since 0.0.1
  */
 register_activation_hook( __FILE__, 'shinycode_activation' );
 function shinycode_activation() {

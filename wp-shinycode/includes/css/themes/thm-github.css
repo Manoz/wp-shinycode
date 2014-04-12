@@ -1,138 +1,18 @@
 /*
  * Theme:   Github
  * @author  Github
- * @since   1.0.0
+ * @since   0.0.1
  */
 
 /* =Default styles
 -------------------------------------------------------------------- */
 
-.shinycode-blockcode {
-    margin-bottom: 1.6em;
-    border: 1px solid #ededed;
-    line-height: 1.5em;
-    background-color: #fff;
-}
 
-.shinycode-blockcode table {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-collapse: separate;
-    background-color: #fff;
-}
-
-.shinycode-blockcode th,
-.shinycode-blockcode td {
-    padding: 0;
-}
-
-.shinycode-blockcode th,
-.shinycode-blockcode td,
-.shinycode-blockcode table {
-    border: 0;
-}
-
-.shinycode-blockcode pre {
-    -webkit-box-sizing: initial;
-    -moz-box-sizing: initial;
-    box-sizing: initial;
-
-    margin: 0;
-    padding: 0;
-    border: 0;
-
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-
-    color: #aaa;
-    color: rgba(0,0,0,0.3);
-    background: none;
-
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
-
-td.ln {
-    width: 1%;
-    padding: 6px 8px;
-    border: 0;
-    border-right: 1px solid #e5e5e5;
-    text-align: right;
-    font-family: Consolas,"Liberation Mono",Courier,monospace;
-    font-size: 13px;
-    line-height: 1.6;
-    vertical-align: top;
-}
-
-td.ln pre.de1 {
-    -webkit-box-sizing: initial;
-    -moz-box-sizing: initial;
-    box-sizing: initial;
-
-    margin: 0;
-    padding: 0;
-    border: 0;
-
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-
-    color: #aaa;
-    color: rgba(0,0,0,0.3);
-
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
-
-td.ln span.li2 {
-    display: block;
-    padding: 0 8px;
-    color: inherit;
-}
-
-td.de1 {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border: 0;
-    line-height: 1.6;
-    white-space: nowrap;
-    background-color: #fff;
-}
-
-td.de1 pre.de1,
-.shinycode-blockcode pre.de1 {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: Consolas,"Liberation Mono",Courier,monospace;
-    font-size: 12px;
-}
-
-span.xtra.li2 {
-    display: block;
-    padding-left: 10px;
-}
-
-.shinycode-title {
-    display: block;
-    padding: 3px 0;
-    border: 1px solid #ededed;
-    border-bottom: 0;
-    text-align: center;
-    font-size: 11px;
-    font-weight: bold;
-    background-color: #fafafa;
-}
 
 /* =Github color scheme
 -------------------------------------------------------------------- */
 
-.shinycode-blockcode.sc-git,
+/*.shinycode-blockcode.sc-git,
 .shinycode-blockcode.sc-git table,
 .shinycode-blockcode.sc-git td.de1 {background-color: #f8f8ff;}
 .shinycode-blockcode.sc-git td.ln {background-color: #ececec;}
@@ -158,4 +38,4 @@ span.xtra.li2 {
 .sc-git span.re2 {color: #000;}
 .sc-git span.re3 {color: #099; }
 .sc-git span.nu0 {color: #009999;}
-.sc-git .es0 {color: #ED7722;}
+.sc-git .es0 {color: #ED7722;}*/

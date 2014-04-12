@@ -1,24 +1,31 @@
 /* Default style */
 
-/* Blockcode container */
+/* Blockcode containers */
 .shinycode-blockcode {
     margin-bottom: 1.6em;
     border: 1px solid #ededed;
-    line-height: 1.5em;
-    background-color: #fff;
+    background-color: #f8f8f8;
+}
+
+.shinycode-blockcode div:first-of-type {padding: 15px;}
+.shinycode-blockcode.shiny-ln div:first-of-type {padding: 0;}
+
+/* Blockcode title if enabled */
+.shinycode-title {
+    display: block;
+    padding: 3px 0;
+    border: 1px solid #ededed;
+    border-bottom: 0;
+    text-align: center;
+    font-size: .8em;
+    font-weight: bold;
+    background-color: #fafafa;
 }
 
 /* Blockcode table if line numbers enabled */
-.shinycode-blockcode table {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-collapse: separate;
-    background-color: #fff;
-}
 
-/* I set default styles to avoid problems with your blog theme. */
+
+/* We set default styles to avoid problems with your blog theme. */
 .shinycode-blockcode th,
 .shinycode-blockcode td {
     padding: 0;
@@ -30,23 +37,29 @@
     border: 0;
 }
 
+.shinycode-blockcode table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-collapse: separate;
+}
+
 .shinycode-blockcode pre {
     -webkit-box-sizing: initial;
     -moz-box-sizing: initial;
     box-sizing: initial;
-
     margin: 0;
     padding: 0;
     border: 0;
-
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-
+    font-family: 'Source Code Pro',Consolas,"Liberation Mono",Courier,monospace;
+    font-size: .9em;
     color: #aaa;
     color: rgba(0,0,0,0.3);
     background: none;
-
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -62,29 +75,24 @@ td.ln {
     border: 0;
     border-right: 1px solid #e5e5e5;
     text-align: right;
-    font-family: Consolas,"Liberation Mono",Courier,monospace;
-    font-size: 13px;
-    line-height: 1.6;
+    font-family: 'Source Code Pro',Consolas,"Liberation Mono",Courier,monospace;
+    font-size: 1em;
     vertical-align: top;
+    background-color: #f8f8f8;
 }
 
 /* Line numbers are in <pre> tag */
 td.ln pre.de1 {
-    -webkit-box-sizing: initial;
     -moz-box-sizing: initial;
     box-sizing: initial;
-
     margin: 0;
     padding: 0;
     border: 0;
-
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-
     color: #aaa;
     color: rgba(0,0,0,0.3);
-
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -97,45 +105,18 @@ td.ln span.li2 {
     color: inherit;
 }
 
-/* =Blockcode content
--------------------------------------------------------------------- */
-
-td.de1 {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border: 0;
-    line-height: 1.6;
-    white-space: nowrap;
-    background-color: #fff;
-}
-
-/* Add .shinycode-blockcode if line numbers are disabled */
-td.de1 pre.de1,
-.shinycode-blockcode pre.de1 {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: Consolas,"Liberation Mono",Courier,monospace;
-    font-size: 12px;
-}
-
 span.xtra.li2 {
     display: block;
     padding-left: 10px;
 }
 
-/* =Blockcode title if enabled
+/* =Blockcode content
 -------------------------------------------------------------------- */
-
-.shinycode-title {
-    display: block;
-    padding: 3px 0;
-    border: 1px solid #ededed;
-    border-bottom: 0;
-    text-align: center;
-    font-size: 11px;
-    font-weight: bold;
-    background-color: #fafafa;
+td.de1 {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 0;
+    white-space: nowrap;
 }
 
 /* =Syntax coloration
@@ -159,42 +140,48 @@ If you want to create a theme, remember to take into consideration each array.
 */
 
 /* Global code color */
-.shinycode-blockcode pre.de1 {color: #333;}
+.shinycode-blockcode pre.de1 {color: #001f3f;}
 
 /* Comments */
-span.co1 {color: #3C802C;}
-span.co2 {color: #3C802C;}
-span.co3 {color: #3C802C;}
-span.co4 {color: #3C802C;}
-span.coMULTI {color: #3C802C;}
+span.co1 {color: #707070;}
+span.co2 {color: #707070;}
+span.co3 {color: #707070;}
+span.co4 {color: #707070;}
+span.coMULTI {color: #707070;}
 
 /* Keywords */
-span.kw1 {color: #AA2063;}
-span.kw2 {color: #881181;}
-span.kw3 {color: #F02A1D;}
-span.kw4 {color: #AA2063;}
+span.kw1 {color: #881181;}
+span.kw2 {color: #4f9fcf;}
+span.kw3 {color: #2f6f9f;}
+span.kw4 {color: #dbad19;}
 
 /* Punctuation */
-span.sy0 {color: #333;}
-span.sy1 {color: #333;}
-span.br0 {color: #333;}
+span.sy0 {color: #2f6f9f;}
+span.sy1 {color: #2f6f9f;}
+
+/* Brackets */
+span.br0 {color: #2f6f9f;}
+
+/* We use the same color for tags and punctuation in html */
+.html5 .sc2, .html5 .kw2 {color: #2f6f9f;}
+.html5 span.st0 {color: #d44950;}
 
 /* Strings */
-span.st0 {color: #ED7722;}
-span.st_h {color: #ED7722;}
+span.st0  {color: #62bb56;}
+span.st_h {color: #62bb56;}
 
 /* Methods */
-span.me1 {color: #7520AF;}
-span.me2 {color: #7520AF;}
+span.me1 {color: #d44950;}
 
 /* Tags & tags attribute */
-span.re0 {color: #881181;}
-span.re1 {color: #881181;}
+span.re0 {color: #d44950;}
+span.re1 {color: #2f6f9f;}
 span.re2 {color: #881181;}
-span.re3 {color: #0F20F6;}
+span.re3 {color: #5F69EB;}
 
 /* Numbers */
-span.nu0 {color: #0F20F6;}
+span.nu0 {color: #DBAD19;}
+span.nu1 {color: #DBAD19;}
 
 /* Escape chars */
-.es0 {color: #ED7722;}
+span.es1 {color: #DBAD19;}
