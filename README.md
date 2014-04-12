@@ -1,5 +1,9 @@
-wp-shinycode
-============
+WP Shiny Code
+=============
+
+### Warning:
+
+The plugin is still in development. You can try it, it works but is not ready for a production state.
 
 ### Desc:
 
